@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Multi-Search Extension",
+    "version": "1.0",
+    "description": "Perform multi-search in Chrome with one click",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popUp.html"
+    },
+    "icons": {
+      "48": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
